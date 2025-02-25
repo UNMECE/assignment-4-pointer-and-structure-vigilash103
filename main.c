@@ -44,21 +44,21 @@ void print_items(Item *item_list, int size)
         printf("*******************************\n");
         printf("            Item %d            \n", i+1);
         printf("*******************************\n");
-        printf("Name: %s", item_list[i].name);
-        printf("Price: %f", item_list[i].price);
-        printf("Catagory: %s", item_list[i].category);
-        printf("SKU: %s", item_list[i].sku);
+        printf("Name: %s\n", item_list[i].name);
+        printf("Price: %f\n", item_list[i].price);
+        printf("Catagory: %s\n", item_list[i].category);
+        printf("SKU: %s\n", item_list[i].sku);
     }
 }
 
-int main(int argc, char const *argv[])
+int main(/*int argc, char const *argv[]*/)
 {
-    if (argc != 2)
-    {
-        printf("usage: %s<size>", argv[1]);
-    }
+    // if (argc != 2)
+    // {
+    //     printf("usage: %s<size>", argv[1]);
+    // }
 
-    char *searchSku = argv[1];
+    // char *searchSku = argv[1];
 
     int size = 5;
     Item *itemList;
@@ -71,7 +71,8 @@ int main(int argc, char const *argv[])
     }
     
     add_item(&itemList[size], 5, "19282", "breakfast", "reese\'s cereal", 0);
-    print_items(&itemList[size], 1);
+    add_item(&itemList[size], 3.95, "79862", "Dairy", "milk", 1);
+    print_items(&itemList[size], 2);
     free_items(&itemList[size], size);
 
     return 0;
