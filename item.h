@@ -1,13 +1,11 @@
 #ifndef ITEM_H
 #define ITEM_H
 
-struct _Item
-{
-  double price;
-  char *sku;
-  char *name;
+typedef struct {
   char *category;
-};
-typedef struct _Item Item;
+  char *name;
+  char *sku;
+  double price;
+} Item;
 
 #endif // !ITEM_H
